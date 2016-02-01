@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DeviceManagerWeb
+Bundle-SymbolicName: DeviceManagerWeb;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: devicemanager.Activator
+Require-Bundle: org.eclipse.rap.ui;bundle-version="2.3.0";resolution:=optional,
+ org.eclipse.rap.addons.filedialog;bundle-version="0.6.0";resolution:=optional,
+ org.eclipse.rap.ui.views;bundle-version="2.3.0";resolution:=optional,
+ org.eclipse.rap.ui.navigator;bundle-version="1.4.0";resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: .,
+ libs/common.jar,
+ libs/ddmlib.jar,
+ libs/guava-15.0.jar,
+ libs/kxml2-2.3.0.jar
+Bundle-ActivationPolicy: lazy

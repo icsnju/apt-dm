@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="devicemanager.Perspective"
+            icon="icons/logo2.gif"
+            id="DeviceManagerWeb.Perspective"
+            name="RCP Perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="Device Information"
+            allowMultiple="true"
+            icon="icons/sample2.gif"
+            class="devicemanager.view.MobileInfoView"
+            id="DeviceManagerWeb.View.MobileInfoView">
+      </view>
+      <view
+            name="Devices List"
+            allowMultiple="true"
+            icon="icons/sample3.gif"
+            class="devicemanager.view.ListView"
+            id="DeviceManagerWeb.View.ListView">
+      </view>
+      <view
+            class="devicemanager.view.LogcatView"
+            id="DeviceManagerWeb.View.LogcatView"
+            name="Logcat"
+            restorable="true">
+      </view>
+      <view
+            class="devicemanager.view.MyProjectExplorer"
+            id="DeviceManagerWeb.View.ProjectExplorer"
+            name="Project Explorer"
+            restorable="true">
+      </view>
+      <view
+            class="devicemanager.view.ConsoleView"
+            id="DeviceManagerWeb.View.ConsoleView"
+            name="Console"
+            restorable="true">
+      </view>
+   </extension>
+  
+   
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Mail"
+            id="DeviceManager.category">
+      </category>
+      <command
+            name="Open Mailbox"
+            description="Opens a mailbox"
+            categoryId="DeviceManager.category"
+            id="DeviceManager.open">
+      </command>
+      
+      <command
+            name="Open Message Dialog"
+            description="Open a message dialog"
+            categoryId="DeviceManager.category"
+            id="DeviceManager.openMessage">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.rap.ui.entrypoint">
+      <entrypoint
+            brandingId="DeviceManagerWeb.branding1"
+            class="devicemanager.Application"
+            id="DeviceManagerWeb.entrypoint1"
+            path="/dm_rap">
+      </entrypoint>
+   </extension>
+   <extension
+         point="org.eclipse.rap.ui.branding">
+      <branding
+            favicon="icons/logo2.gif"
+            id="DeviceManagerWeb.branding1"
+            title="Device Manager">
+      </branding>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="devicemanager.editor.DocEditor"
+            default="false"
+            id="DeviceManagerWeb.Editor.DocEditor"
+            name="Doc Editor">
+      </editor>
+   </extension>
+
+</plugin>
